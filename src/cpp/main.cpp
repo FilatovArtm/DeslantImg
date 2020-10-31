@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[]) 
 {
-	const cv::Mat img = cv::imread(argv[0], cv::IMREAD_GRAYSCALE);
+	const cv::Mat img = cv::imread(argv[1], cv::IMREAD_GRAYSCALE);
 	
 	
 #ifdef USE_GPU 
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 #endif
 
 	// write results to file
-	cv::imwrite(argv[1], res1);
+	cv::imwrite(argv[2], res1);
 
 	return 0;
 }
